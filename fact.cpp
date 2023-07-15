@@ -1,17 +1,19 @@
 #include<iostream>
 using namespace std;
-int fact(int a){//4
-	// 4 *3*2*1
-	int ans=1;
-	for(int i=a;i>=1;i--){//1
-	ans=ans*i;//24
-}
-return ans;//24
-
+int fact(int n){
+	// base case
+	if(n==0){
+		return 1;
+	}
+	// rec case
+	return n*fact(n-1);
 }
 int main(){
 	int n;
-	cin>>n;//4
-	cout<<fact(n)<<endl;	
+	cin>>n;
+	cout<<fact(n)<<endl;
+
+
+
 	return 0;
 }
